@@ -4,3 +4,5 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+// I don't think this and ./preload.js are needed, but eh, we'll keep them anyway lmfao

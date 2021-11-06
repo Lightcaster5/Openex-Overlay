@@ -9,15 +9,15 @@ class Store {
     const userDataPath = require('os').homedir() + "\\AppData\\Roaming\\openex";
     // We'll use the `configName` property to set the file name and path.join to bring it all together as a string
     this.path = path.join(userDataPath, opts.configName + '.json');
-    
+
     this.data = parseDataFile(this.path, opts.defaults);
   }
-  
+
   // This will just return the property on the `data` object
   get(key) {
     return this.data[key];
   }
-  
+
   // ...and this will set it
   set(key, val) {
     this.data[key] = val;
@@ -34,7 +34,7 @@ function parseDataFile(filePath, defaults) {
   // `fs.readFileSync` will return a JSON string which we then parse into a Javascript object
   try {
     return JSON.parse(fs.readFileSync(filePath));
-  } catch(error) {
+  } catch (error) {
     // if there was some kind of error, return the passed in defaults instead.
     return defaults;
   }

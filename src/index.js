@@ -26,7 +26,6 @@ window.onload = function () {
     }
 
     mainLoop();
-
     createLines();
     regenerateAPI();
 }
@@ -84,7 +83,7 @@ function update() {
     var index = document.getElementById('index');
     index.innerHTML = "";
 
-    let sortedPlayers = new Map([...levelMap.entries()].sort((a, b) => b[1] - a[1]));
+    let sortedPlayers = new Map([...levelMap.entries()].sort((a, b) => b[1] - a[1])); // we dont know what this does so fuck whoever made it
 
     for (let nicked of nickedArray) {
         var levelLi = document.createElement('li'),
@@ -285,6 +284,11 @@ function clean() {
 }
 
 const lcPath = homedir + "/.lunarclient/offline/1.8/logs/latest.log"
+/*
+ * hopefully we can make a custom dir here eventually
+ * basically just put something in config saying ex.
+ * HOMEDIR\AppData\Roaming\.minecraft\logs\ or
+ * C:\.minecraft */
 
 var chunkIndex;
 var startLineCount = 0;
