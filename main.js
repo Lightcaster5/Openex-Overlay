@@ -56,9 +56,9 @@ app.on('window-all-closed', function () {
 // code. You can also put them in separate files and require them here.
 
 const getWindow = () => BrowserWindow.getFocusedWindow();
-ipcMain.on('closeWindow', (evt, arg) => {
+ipcMain.on('closeWindow', () => {
   app.quit();
 });
-ipcMain.on('minimizeWindow', (evt, arg) => {
+ipcMain.on('minimizeWindow', () => {
   getWindow().minimize();
 });

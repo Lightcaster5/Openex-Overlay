@@ -308,8 +308,8 @@ async function processLineByLine() {
             if (isValidLine(line)) {
                 if (lineData.includes('[Client thread/INFO]: [CHAT] ')) {
                     let data = stripLine(lineData.substring(40));
-                    if (!data.startsWith("From")) {
-                        if (!data.includes(":") && (data.includes("joined the lobby!") || data.startsWith("Sending you to mini") || data.includes("unclaimed leveling rewards") || data.includes("unclaimed achievement rewards"))) {
+                    if (!data.startsWith("From" || !data.startsWith("Party >" || !data.startsWith("Guild >") || !data.startsWith("[")))) { // i don't think the [ should affect much considering we're filtering shit out, and a player will **never** join a lobby with their rank in chat
+                        if (!data.includes(":") && (data.includes("joined the lobby!" || data.includes("spooked into the lobby!")) || data.startsWith("Sending you to mini") || data.includes("unclaimed leveling rewards") || data.includes("unclaimed achievement rewards"))) {
                             players = [];
                             nickedArray = new Array();
                             loadingArray = new Array();
