@@ -1,9 +1,6 @@
+![openex](https://i.imgur.com/HDtez1x.png)
 # Openex Overlay
 a simple overlay for Hypixel Bedwars
-
-
-## Features
-
 
 
 ## Usage
