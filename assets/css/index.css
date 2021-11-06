@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../Quicksand-Light.ttf') format("truetype");;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: rgba(19, 18, 18, 0.85);
+  width: 100%;
+  height: 30px;
+  -webkit-app-region: drag;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px 10px 0 0;
+}
+
+.navbar p {
+  font-size: 20px;
+  color: rgba(240, 240, 240);
+  position: fixed;
+  top: 2px;
+  left: 7.5px;
+}
+
+.navbar button {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(33, 32, 32);
+  color: rgba(240, 240, 240, 1.0);
+  display: block;
+  position: absolute;
+  border: none;
+  border-radius: 2.5px;
+  -webkit-app-region: no-drag;
+}
+
+#minimize {
+  right: 30px;
+  top: 5px;
+}
+
+#close {
+  right: 5px;
+  top: 5px;
+}
+
+.content {
+  color: #AAAAAA;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  background-color: rgba(25, 26, 26, 0.75);
+  border-radius: 0 0 10px 10px;
+  height: 330px;
+}
+
+.headers {
+  display: flex;
+  flex-direction: horizontal;
+  height: 25px;
+  width: 675px;
+  border: 1px rgb(19, 18, 18);
+  border-bottom-style: solid;
+}
+
+.headers ul {
+  list-style-type: none;
+}
+
+.headers ul li {
+  display: inline;
+  float: left;
+}
+
+.headers ul li a {
+  text-align: center;
+  display: block;
+  text-shadow: 1px 1px 2.5px #000000;
+}
+
+.headers ul li:nth-child(1) a {
+  padding: 2.5px 15px;
+}
+
+.headers ul li:nth-child(2) a {
+  padding: 2.5px 100px;
+}
+
+.headers ul li:nth-child(3) a {
+  padding: 2.5px 10px;
+}
+
+.headers ul li:nth-child(4) a {
+  padding: 2.5px 10px;
+}
+
+.headers ul li:nth-child(5) a {
+  padding: 2.5px 10px;
+}
+
+.headers ul li:nth-child(6) a {
+  padding: 2.5px 10px;
+}
+
+.headers ul li:nth-child(7) a {
+  padding: 2.5px 15px;
+}
+
+.headers ul li:nth-child(8) a {
+  padding: 2.5px 20px;
+}
+
+.lines ul {
+  list-style-type: none;
+}
+
+.lines #lvl {
+  width: 50px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+.lines #name {
+  width: 230px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+.lines #fkdr {
+  width: 62.5px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+.lines #wlr {
+  width: 47.5px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+.lines #bblr {
+  width: 47.5px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+.lines #fkills {
+  width: 65px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+.lines #wins {
+  width: 57.5px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+.lines #index {
+  width: 70px;
+  text-align: center;
+  text-shadow: 1px 1px 2.5px #000000;
+  display: inline-block;
+}
+
+hr {
+  border: 1px rgb(19, 18, 18);
+  border-bottom-style: solid;
+  height: 1px;
+  width: 100%;
+  position: fixed;
+}
