@@ -24,6 +24,17 @@ window.onload = function () {
     document.getElementById("minimize").onclick = function () {
         ipcRenderer.send('minimizeWindow');
     }
+    document.getElementById("settings-button").onclick = function () {
+        var settings = document.getElementById("settings");
+        var content = document.getElementById("content");
+        if (settings.style.display == "" || settings.style.display == "none") {
+            settings.style.display = "block";
+            content.style.display = "none";
+        } else {
+            settings.style.display = "none";
+            content.style.display = "block";
+        }
+    }
 
     mainLoop();
     createLines();

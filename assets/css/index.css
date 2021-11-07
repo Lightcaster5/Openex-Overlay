@@ -44,12 +44,17 @@
   top: 5px;
 }
 
+#settings-button {
+  right: 55px;
+  top: 5px;
+}
+
 #close {
   right: 5px;
   top: 5px;
 }
 
-.content {
+#content {
   color: #AAAAAA;
   font-weight: bold;
   font-family: 'Quicksand', sans-serif;
@@ -58,6 +63,7 @@
   border-radius: 0 0 10px 10px;
   height: 330px;
   width: 675px;
+  display: block;
 }
 
 .headers {
@@ -182,4 +188,72 @@ hr {
   height: 1px;
   width: 100%;
   position: fixed;
+}
+
+#settings {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  background-color: rgba(25, 26, 26, 0.75);
+  border-radius: 0 0 10px 10px;
+  height: 330px;
+  width: 675px;
+  display: none;
+}
+
+#settings-title {
+  font-size: 17.5px;
+  position: fixed;
+  top: 47.5px; 
+  left: 20px;
+}
+
+#api-title {
+  font-size: 15px;
+  position: fixed;
+  top: 52px;
+  left: 315px;
+}
+
+#api-input {
+  position: fixed;
+  left: 385px;
+  top: 50px;
+  height: 25px;
+  border: none;
+  border-radius: 15px;
+  padding: 0 10px;
+  width: 250px;
+  text-align: center;
+}
+
+#api-input:focus {
+  outline: none;
+}
+
+#theme {
+  position: fixed;
+  width: 200px;
+  height: 250px;
+  background-color: rgba(25, 26, 26, 0.75);
+  top: 90px;
+  left: 20px;
+  border-radius: 10px;
+}
+
+#extra {
+  position: fixed;
+  width: 415px;
+  height: 250px;
+  background-color: rgba(25, 26, 26, 0.75);
+  top: 90px;
+  left: 240px;
+  border-radius: 10px;
+}
+
+.settings-header {
+  text-align: center;
+  top: 5px;
+  width: 100%;
+  position: absolute;
 }
