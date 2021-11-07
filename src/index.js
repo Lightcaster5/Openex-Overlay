@@ -53,6 +53,19 @@ const COLOR_RED = "#FF5555";
 
 var players = [];
 
+/* for readme.md screenshot
+players.push('51i');
+players.push('thaYt');
+players.push('Lightcaster5');
+players.push('gamerboy80');
+players.push('Manhal_IQ_');
+players.push('B0MBIES');
+players.push('WarOG');
+players.push('xLectroLiqhtnin');
+players.push('Toyless');
+players.push('ilykris');
+*/
+
 var loadingArray = new Array();
 var nickedArray = new Array();
 
