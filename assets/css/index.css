@@ -13,6 +13,7 @@
   background-color: rgba(19, 18, 18, 0.85);
   width: 100%;
   height: 30px;
+  width: 675px;
   -webkit-app-region: drag;
   font-family: 'Quicksand', sans-serif;
   border-radius: 10px 10px 0 0;
@@ -56,6 +57,7 @@
   background-color: rgba(25, 26, 26, 0.75);
   border-radius: 0 0 10px 10px;
   height: 330px;
+  width: 675px;
 }
 
 .headers {

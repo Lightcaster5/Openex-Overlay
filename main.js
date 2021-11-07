@@ -11,7 +11,7 @@ function createWindow () {
     transparent: true,
     frame: false,
     title: "Openex",
-    icon: "./assets/icons/Logo Aqua.png",
+    icon: "./assets/icons/logo_aqua.png",
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

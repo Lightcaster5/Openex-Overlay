@@ -234,11 +234,15 @@ function clean() {
                         loadingArray.splice(index, 1);
                     }
                 }
-            }).catch(() => {
-                nickedArray.push(player);
+            }).catch((err) => {
                 var index = loadingArray.indexOf(player);
                 if (index !== -1) {
                     loadingArray.splice(index, 1);
+                }
+                if (err.message.includes('504 Gateway Time-out!')) {
+                    clean();
+                } else {
+                    nickedArray.push(player);
                 }
             });
         }
@@ -321,7 +325,7 @@ async function processLineByLine() {
             if (isValidLine(line)) {
                 if (lineData.includes('[Client thread/INFO]: [CHAT] ')) {
                     let data = stripLine(lineData.substring(40));
-                    if (!data.startsWith("From")) { 
+                    if (!data.startsWith("From")) {
                         if (!data.includes(":") && (data.includes("joined the lobby!" || data.includes("spooked into the lobby!") || data.includes("sled into the lobby!")) || data.startsWith("Sending you to mini") || data.includes("unclaimed leveling rewards") || data.includes("unclaimed achievement rewards"))) {
                             players = [];
                             nickedArray = new Array();
@@ -340,6 +344,7 @@ async function processLineByLine() {
                             }
                         } else if (data.startsWith("ONLINE: ")) {
                             players = [];
+                            clean();
                             var p = data.replace("ONLINE: ", "").replace(/\s+/g, "").split(",");
                             players = p;
                             clean();
