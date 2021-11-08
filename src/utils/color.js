@@ -161,5 +161,7 @@ module.exports = {
     getWinsColor,
     getIndexColor,
     getRankColor,
-    color
+    color,
+    COLOR_RED,
+    COLOR_BLUE
 }

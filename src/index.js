@@ -59,9 +59,6 @@ function mainLoop() {
     }, 32);
 }
 
-const COLOR_BLUE = "#5555FF";
-const COLOR_RED = "#FF5555";
-
 var players = [];
 
 /* for readme.md screenshot
@@ -119,14 +116,14 @@ function update() {
             winsLi = document.createElement('li'),
             indexLi = document.createElement('li');
 
-        levelLi.innerHTML = colorUtils.color("-", COLOR_RED);
-        nameLi.innerHTML = colorUtils.color(nicked, COLOR_RED);
-        fkdrLi.innerHTML = colorUtils.color("-", COLOR_RED);
-        wlrLi.innerHTML = colorUtils.color("-", COLOR_RED);
-        bblrLi.innerHTML = colorUtils.color("-", COLOR_RED);
-        fkillsLi.innerHTML = colorUtils.color("-", COLOR_RED);
-        winsLi.innerHTML = colorUtils.color("-", COLOR_RED);
-        indexLi.innerHTML = colorUtils.color("-", COLOR_RED);
+        levelLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_RED);
+        nameLi.innerHTML = colorUtils.color(nicked, colorUtils.COLOR_RED);
+        fkdrLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_RED);
+        wlrLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_RED);
+        bblrLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_RED);
+        fkillsLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_RED);
+        winsLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_RED);
+        indexLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_RED);
 
         levels.appendChild(levelLi);
         names.appendChild(nameLi);
@@ -177,14 +174,14 @@ function update() {
             winsLi = document.createElement('li'),
             indexLi = document.createElement('li');
 
-        levelLi.innerHTML = colorUtils.color("-", COLOR_BLUE);
-        nameLi.innerHTML = colorUtils.color(loading, COLOR_BLUE);
-        fkdrLi.innerHTML = colorUtils.color("-", COLOR_BLUE);
-        wlrLi.innerHTML = colorUtils.color("-", COLOR_BLUE);
-        bblrLi.innerHTML = colorUtils.color("-", COLOR_BLUE);
-        fkillsLi.innerHTML = colorUtils.color("-", COLOR_BLUE);
-        winsLi.innerHTML = colorUtils.color("-", COLOR_BLUE);
-        indexLi.innerHTML = colorUtils.color("-", COLOR_BLUE);
+        levelLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_BLUE);
+        nameLi.innerHTML = colorUtils.color(loading, colorUtils.COLOR_BLUE);
+        fkdrLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_BLUE);
+        wlrLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_BLUE);
+        bblrLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_BLUE);
+        fkillsLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_BLUE);
+        winsLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_BLUE);
+        indexLi.innerHTML = colorUtils.color("-", colorUtils.COLOR_BLUE);
 
         levels.appendChild(levelLi);
         names.appendChild(nameLi);
