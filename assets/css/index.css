@@ -27,6 +27,11 @@
   left: 7.5px;
 }
 
+#version-number {
+  color: rgba(140, 140, 140);
+  left: 82.5px;
+}
+
 .navbar button {
   width: 20px;
   height: 20px;
