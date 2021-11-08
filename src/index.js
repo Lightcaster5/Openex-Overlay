@@ -18,6 +18,7 @@ const Hypixel = require('hypixel-api-reborn');
 var hypixel;
 
 window.onload = function () {
+    document.getElementById('version-number').innerHTML = "v" + require("../package.json").version;
     document.getElementById("close").onclick = function () {
         ipcRenderer.send('closeWindow');
     }
