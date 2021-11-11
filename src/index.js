@@ -8,7 +8,13 @@ const Store = require('./utils/Store');
 const store = new Store({
     configName: 'openex-properties',
     defaults: {
-        api_key: ''
+        api_key: '',
+        index_difficulty: 'EASY',
+        log_path: 'VANILLA',
+        custom_log_path: '',
+        cache_stats: true,
+        retry_on_fail: true,
+        update_on_fk_dc: true
     }
 });
 
@@ -20,6 +26,7 @@ var hypixel;
 window.onload = function () {
     document.getElementById('version-number').innerHTML = "v" + require("../package.json").version;
     document.getElementById("close").onclick = function () {
+        store.set('api_key', apiKey);
         ipcRenderer.send('closeWindow');
     }
     document.getElementById("minimize").onclick = function () {
@@ -31,9 +38,11 @@ window.onload = function () {
         if (settings.style.display == "" || settings.style.display == "none") {
             settings.style.display = "block";
             content.style.display = "none";
+            initSettings();
         } else {
             settings.style.display = "none";
             content.style.display = "block";
+            saveSettings();
         }
     }
 
@@ -416,4 +425,13 @@ function regenerateAPI() {
     hypixel = new Hypixel.Client(`${apiKey}`, {
         silent: true,
     });
+}
+
+function initSettings() {
+    var apiInput = document.getElementById('api-input');
+    apiInput.value = apiKey;
+}
+
+function saveSettings() {
+    // save settings here
 }

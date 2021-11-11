@@ -52,13 +52,40 @@
     <div id="settings">
         <p id="settings-title">Settings</p>
         <p id="api-title">API Key</p>
-        <input type="text" id="api-input" placeholder="fbd83a7f - •••• - •••• - •••• - ••••••••••••">
+        <input type="password" id="api-input" placeholder="XXXXXXXX - •••• - •••• - •••• - ••••••••••••">
         <div id="theme">
             <p class="settings-header">Theme</p>
         </div>
         <div id="extra">
             <p class="settings-header">Extra</p>
 
+            <div class="toggleables">
+                <!-- Flexbox -->
+                <div class="toggleable" id="cache-stats">
+                    <p class="toggleable-header">Cache Stats</p>
+                    <label class="slider">
+                        <input type="checkbox" class="toggleable-input" id="cache-stats-input" checked>
+                        <span class="toggleable-slider"><span class="toggleable-slider-off">OFF</span><span
+                                class="toggleable-slider-on">ON</span></span>
+                    </label>
+                </div>
+                <div class="toggleable" id="retry-on-fail">
+                    <p class="toggleable-header">Retry on Fail</p>
+                    <label class="slider">
+                        <input type="checkbox" class="toggleable-input" id="retry-on-fail-input" checked>
+                        <span class="toggleable-slider"><span class="toggleable-slider-off">OFF</span><span
+                                class="toggleable-slider-on">ON</span></span>
+                    </label>
+                </div>
+                <div class="toggleable" id="update-on-fk-dc">
+                    <p class="toggleable-header">Update on FK/DC</p>
+                    <label class="slider">
+                        <input type="checkbox" class="toggleable-input" id="update-on-fk-dc-input" checked>
+                        <span class="toggleable-slider"><span class="toggleable-slider-off">OFF</span><span
+                                class="toggleable-slider-on">ON</span></span>
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
 </body>
