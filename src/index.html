@@ -13,9 +13,8 @@
     <div class="navbar">
         <p>Openex</p>
         <p id="version-number"></p>
-        <button id="settings-button">S</button>
-        <button id="minimize">_</button>
-        <button id="close">X</button>
+        <button id="minimize"><img src="../assets/svg/minus-solid.svg" alt="S"></svg></button>
+        <button id="close"><img src="../assets/svg/times-solid.svg" alt="S"></svg></button>
     </div>
     <div id="content">
         <div class="headers">
@@ -49,45 +48,76 @@
             </ul>
         </div>
     </div>
-    <div id="settings">
-        <p id="settings-title">Settings</p>
-        <p id="api-title">API Key</p>
-        <input type="password" id="api-input" placeholder="XXXXXXXX - •••• - •••• - •••• - ••••••••••••">
-        <div id="theme">
-            <p class="settings-header">Theme</p>
-        </div>
-        <div id="extra">
-            <p class="settings-header">Extra</p>
-
-            <div class="toggleables">
-                <!-- Flexbox -->
-                <div class="toggleable" id="cache-stats">
-                    <p class="toggleable-header">Cache Stats</p>
-                    <label class="slider">
-                        <input type="checkbox" class="toggleable-input" id="cache-stats-input" checked>
-                        <span class="toggleable-slider"><span class="toggleable-slider-off">OFF</span><span
-                                class="toggleable-slider-on">ON</span></span>
-                    </label>
-                </div>
-                <div class="toggleable" id="retry-on-fail">
-                    <p class="toggleable-header">Retry on Fail</p>
-                    <label class="slider">
-                        <input type="checkbox" class="toggleable-input" id="retry-on-fail-input" checked>
-                        <span class="toggleable-slider"><span class="toggleable-slider-off">OFF</span><span
-                                class="toggleable-slider-on">ON</span></span>
-                    </label>
-                </div>
-                <div class="toggleable" id="update-on-fk-dc">
-                    <p class="toggleable-header">Update on FK/DC</p>
-                    <label class="slider">
-                        <input type="checkbox" class="toggleable-input" id="update-on-fk-dc-input" checked>
-                        <span class="toggleable-slider"><span class="toggleable-slider-off">OFF</span><span
-                                class="toggleable-slider-on">ON</span></span>
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script>
+        var easy = document.getElementById('index-difficulty-easy');
+        var medium = document.getElementById('index-difficulty-medium');
+        var hard = document.getElementById('index-difficulty-hard');
+        var vanilla = document.getElementById('log-path-vanilla');
+        var lunar = document.getElementById('log-path-lunar');
+        var badlion = document.getElementById('log-path-badlion');
+        var custom = document.getElementById('log-path-custom');
+        var log = document.getElementById('log-path-slider');
+        var customLog = document.getElementById('custom-log-path');
+        var root = document.querySelector(":root");
+        document.getElementById('index-difficulty-easy').onclick = function () {
+            easy.style.color = 'white';
+            medium.style.color = '#777777';
+            hard.style.color = '#777777';
+            root.style.setProperty("--index-difficulty-offset", "2px");
+        }
+        document.getElementById('index-difficulty-medium').onclick = function () {
+            easy.style.color = '#777777';
+            medium.style.color = 'white';
+            hard.style.color = '#777777';
+            root.style.setProperty("--index-difficulty-offset", "50px");
+        }
+        document.getElementById('index-difficulty-hard').onclick = function () {
+            easy.style.color = '#777777';
+            medium.style.color = '#777777';
+            hard.style.color = 'white';
+            root.style.setProperty("--index-difficulty-offset", "98px");
+        }
+        document.getElementById('log-path-vanilla').onclick = function () {
+            vanilla.style.color = 'white';
+            lunar.style.color = '#777777';
+            badlion.style.color = '#777777';
+            custom.style.color = '#777777';
+            root.style.setProperty("--log-path-left", "2px");
+            root.style.setProperty("--log-path-top", "2px");
+            log.style.setProperty("height", "40px");
+            customLog.style.opacity = 0;
+        }
+        document.getElementById('log-path-lunar').onclick = function () {
+            vanilla.style.color = '#777777';
+            lunar.style.color = 'white';
+            badlion.style.color = '#777777';
+            custom.style.color = '#777777';
+            root.style.setProperty("--log-path-left", "48px");
+            root.style.setProperty("--log-path-top", "2px");
+            log.style.setProperty("height", "40px");
+            customLog.style.opacity = 0;
+        }
+        document.getElementById('log-path-badlion').onclick = function () {
+            vanilla.style.color = '#777777';
+            lunar.style.color = '#777777';
+            badlion.style.color = 'white';
+            custom.style.color = '#777777';
+            root.style.setProperty("--log-path-left", "2px");
+            root.style.setProperty("--log-path-top", "21px");
+            log.style.setProperty("height", "40px");
+            customLog.style.opacity = 0;
+        }
+        document.getElementById('log-path-custom').onclick = function () {
+            vanilla.style.color = '#777777';
+            lunar.style.color = '#777777';
+            badlion.style.color = '#777777';
+            custom.style.color = 'white';
+            root.style.setProperty("--log-path-left", "48px");
+            root.style.setProperty("--log-path-top", "21px");
+            log.style.setProperty("height", "56px");
+            customLog.style.opacity = 1;
+        }    
+    </script>
 </body>
 
 </html>
